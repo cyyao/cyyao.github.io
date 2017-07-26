@@ -1,0 +1,338 @@
+//  引入 base
+@import 'base.scss';
+// 去掉最外层容器的padding
+.wjs-layout {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+// 顶部的通栏
+.wjs-header {
+    .row>div {
+        border: 1px solid #000;
+        height: 40px;
+        text-align: center;
+        line-height: 40px;
+        a {
+            color: gray;
+            font-size: 12px;
+        }
+    } // 设置 第一个 栅格容器中的 a标签的 img
+    .row>div:first-child a {
+        position: relative;
+    } // 图片设置定位 默认隐藏
+    .row>div:first-child a img {
+        position: absolute;
+        left: -20px;
+        top: 25px;
+        display: none;
+    } // hover 出现图片
+    .row>div:first-child a:hover img {
+        display: block;
+    }
+}
+
+// 微金所导航栏样式
+// 由于 nav嵌套的层级较多 为了避免 我们修改时要写太多的结构 改为 id 方便一些
+#wjs-nav {
+    // .wjs-nav{
+    a {
+        height: 80px;
+        line-height: 80px;
+        padding-top: 0;
+        padding-bottom: 0; // 去掉背景色
+        background-color: transparent;
+        text-align: center;
+    }
+    a:hover {
+        border-bottom: 3px solid red;
+    } // 去掉第一个a标签的hover 底部边框
+    a.navbar-brand:hover {
+        border-bottom: none;
+    } // 设置第一个a标签内部字体的大小 已经颜色
+    a.navbar-brand {
+        font-size: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        span:first-child {
+            color: red;
+        }
+        span:last-child {
+            color: black;
+        }
+    } // 设置汉堡菜单 上下居中
+    .navbar-toggle {
+        margin-top: 24px;
+    }
+}
+
+// 设置轮播图的样式
+.wjs-banner {
+    // 为了避免选择器命中的元素太多 稍微约束一下 
+    .item a {
+        width: 100%;
+        display: block;
+        img {
+            width: 100%;
+        }
+    } //  设置背景图
+    .item a[class^=banner-img] {
+        height: 410px;
+    }
+    .item a.banner-img-a {
+        background: url('../images/slide_01_2000x410.jpg')no-repeat center;
+    }
+    .item a.banner-img-b {
+        background: url('../images/slide_02_2000x410.jpg')no-repeat center;
+    }
+}
+
+// 保障区域
+.wjs-protect {
+    padding: 40px 250px;
+    .media {
+        cursor: pointer;
+        &:hover {
+            color: red;
+            text-decoration: underline;
+            a {
+                color: red;
+            }
+        }
+    }
+    .media a {
+        font-size: 50px;
+        color: gray;
+    }
+    .row>div {
+        padding: 10px;
+    }
+}
+
+// 预约区域
+.wjs-book {
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    padding: 10px 250px;
+    .left {
+        a {
+            color: red;
+            border-bottom: 1px dashed red;
+            text-decoration: none;
+        }
+    }
+    .right {
+        a {
+            color: gray;
+            &:hover {
+                color: red;
+            }
+        }
+    }
+}
+
+// 投资区域
+#wjs-earnmoney {
+    .nav-tabs {
+        a {
+            color: gray; // 去除a标签的 边框颜色
+            border-color: transparent;
+            &:hover {
+                background-color: transparent;
+                border-color: transparent;
+            }
+        } // li标签被active时 添加底部边框 红色的粗线条
+        li.active a {
+            border-bottom: 3px solid red;
+        }
+    } // 设置优惠卷（juan quan）的样式
+    .tab-content .row {
+        >div {
+            padding: 10px;
+        }
+        .ticket {
+            height: 150px;
+            display: block; // background-color: skyblue;
+            display: flex; //  使用阴影 让他 被勾勒出来
+            box-shadow: 5px 5px 10px hotpink;
+            // 字体颜色
+            color:gray;
+            text-decoration: none;
+            .right {
+                width: 108px;
+                text-align: center;
+                padding-top: 20px;
+                border-left: 1px dashed #000;
+                position: relative; // 使用伪元素设置顶部 跟底部的圆圈
+                &::before {
+                    content: '';
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 50%;
+                    background-color: white;
+                    position: absolute;
+                    top: -10px;
+                    left: -10px;
+                    border-bottom: 1px solid #000;
+                }
+                &::after {
+                    content: '';
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 50%;
+                    background-color: white;
+                    position: absolute;
+                    bottom: -10px;
+                    left: -10px;
+                    border-top: 1px solid #000;
+                }
+                // 设置span的外观
+                span{
+                  padding: 2px;
+                  border:1px solid gray;
+                  border-radius: 4px;
+                  &:first-child{
+                    border-color:yellowgreen;
+                    color:yellowgreen;
+                    font-weight: 900;
+                  }
+                //   &:nth-child(2){
+                    // 只找 第二个 这种类型的元素 
+                  &:nth-of-type(2){
+                    border-color:hotpink;
+                    color:hotpink;
+                    font-weight: 900;
+                  }
+                }
+                p{
+                  padding-top: 10px;
+                }
+            }
+            .left {
+                flex: 1;
+                h2{
+                  text-align: center;
+                  margin: 0;
+                  font-size:20px;
+                  font-weight: normal;
+                  padding: 5px 0;
+                }
+                .content{
+                  display: flex;
+                  justify-content: space-between;
+                  padding: 0 10px;
+                  font-weight: 900;
+                  p{
+                    padding: 3px 0;
+
+                    margin: 0;
+                  }
+                  .content-l{}
+                  .content-r{
+                    text-align: right;
+                  }
+                }
+            }
+        }
+        // 特殊处理 红色的优惠卷
+        .ticket.red{
+          background-color: red;
+          color:white;
+          .right{
+             border-color: white;
+          }
+          // 字体图标变大
+          &::before{
+            font-size:40px;
+            position: absolute;
+          }
+        }
+    }
+}
+
+// 新闻区域
+.wjs-news{
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    .row>div:nth-of-type(2) h2{
+        text-align: center;
+        border-bottom: 1px solid #000;
+        padding-bottom: 10px;
+        position: relative;
+        // 使用伪元素来生成小圆
+        &::before{
+            content:'';
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            border: 1px solid #000;
+            right:-10px;
+            bottom:-5px;
+        }
+    }
+    // 修改 区域3的 tab的样式
+    .nav-tabs{
+        li{
+            padding: 20px 0;
+            a{
+                font-size:50px;
+                color:white;
+                background-color: gray;
+                border-radius: 50%;
+                width: 80px;
+                height: 80px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                &:hover{
+                     background-color: red;
+                     color:white;
+                }
+            }
+        }
+        // li标签拥有actie这个类似 变为红色背景色
+        li.active a{
+            background-color: red;
+            color:white;
+        }
+    }
+
+    // 设置 竖线的样式
+    .line{
+        height: 80%;
+        border-left: 1px dashed black;
+        position: absolute;
+        top:25px;
+        left:40px;
+    }
+
+    // 最后一个区域的 内容部分的 ul标签 
+    .tab-content{
+        ul{
+            li{
+                padding: 10px 0;
+                a{
+                    color:gray;
+                }
+            }
+        }
+    }
+} 
+
+// 底部区域
+.wjs-footer{
+    text-align: center;
+    ul{
+        display: inline-block;
+        li{
+            padding: 0 10px;
+        }
+        a{
+            font-size:100px;
+            text-decoration: none;
+            color:gray;
+        }
+    }
+}

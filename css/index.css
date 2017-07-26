@@ -1,0 +1,427 @@
+@charset "UTF-8";
+/* 导入 字体文件 */
+@font-face {
+  font-family: 'wjsfont';
+  src: url("../fonts/MiFie-Web-Font.eot");
+  src: url("../fonts/MiFie-Web-Font.eot?#iefix") format("embedded-opentype"), url("../fonts/MiFie-Web-Font.woff") format("woff"), url("../fonts/MiFie-Web-Font.ttf") format("truetype"), url("../fonts/MiFie-Web-Font.svg") format("svg");
+}
+/* 定义 使用的class */
+.wjsfont {
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-family: 'wjsfont';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+}
+
+.wjsfont-logo::before {
+  content: '\e920';
+}
+
+.wjsfont-name::before {
+  content: '\e921';
+}
+
+.wjsfont-e903::before {
+  content: '\e903';
+}
+
+.wjsfont-e901::before {
+  content: '\e901';
+}
+
+.wjsfont-e904::before {
+  content: '\e904';
+}
+
+.wjsfont-e905::before {
+  content: '\e905';
+}
+
+.wjsfont-e902::before {
+  content: '\e902';
+}
+
+/* 添加 产品列表的 文字样式 */
+.wjsfont-e915::before {
+  content: '\e915';
+}
+
+.wjsfont-new01::before {
+  content: "\e90e";
+}
+
+.wjsfont-new02::before {
+  content: "\e90f";
+}
+
+.wjsfont-new03::before {
+  content: "\e910";
+}
+
+.wjsfont-new04::before {
+  content: "\e911";
+}
+
+/* 网页 最下方的 合作单位 */
+.wjsfont-partner01::before {
+  content: "\e946";
+}
+
+.wjsfont-partner02::before {
+  content: "\e92f";
+}
+
+.wjsfont-partner03::before {
+  content: "\e92e";
+}
+
+.wjsfont-partner04::before {
+  content: "\e92a";
+}
+
+.wjsfont-partner05::before {
+  content: "\e929";
+}
+
+.wjsfont-partner06::before {
+  content: "\e931";
+}
+
+.wjsfont-partner07::before {
+  content: "\e92c";
+}
+
+.wjsfont-partner08::before {
+  content: "\e92b";
+}
+
+.wjsfont-partner09::before {
+  content: "\e92d";
+}
+
+ul, ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.wjs-layout {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.wjs-header .row > div {
+  border: 1px solid #000;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+}
+.wjs-header .row > div a {
+  color: gray;
+  font-size: 12px;
+}
+.wjs-header .row > div:first-child a {
+  position: relative;
+}
+.wjs-header .row > div:first-child a img {
+  position: absolute;
+  left: -20px;
+  top: 25px;
+  display: none;
+}
+.wjs-header .row > div:first-child a:hover img {
+  display: block;
+}
+
+#wjs-nav a {
+  height: 80px;
+  line-height: 80px;
+  padding-top: 0;
+  padding-bottom: 0;
+  background-color: transparent;
+  text-align: center;
+}
+#wjs-nav a:hover {
+  border-bottom: 3px solid red;
+}
+#wjs-nav a.navbar-brand:hover {
+  border-bottom: none;
+}
+#wjs-nav a.navbar-brand {
+  font-size: 70px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+#wjs-nav a.navbar-brand span:first-child {
+  color: red;
+}
+#wjs-nav a.navbar-brand span:last-child {
+  color: black;
+}
+#wjs-nav .navbar-toggle {
+  margin-top: 24px;
+}
+
+.wjs-banner .item a {
+  width: 100%;
+  display: block;
+}
+.wjs-banner .item a img {
+  width: 100%;
+}
+.wjs-banner .item a[class^=banner-img] {
+  height: 410px;
+}
+.wjs-banner .item a.banner-img-a {
+  background: url("../images/slide_01_2000x410.jpg") no-repeat center;
+}
+.wjs-banner .item a.banner-img-b {
+  background: url("../images/slide_02_2000x410.jpg") no-repeat center;
+}
+
+.wjs-protect {
+  padding: 40px 250px;
+}
+.wjs-protect .media {
+  cursor: pointer;
+}
+.wjs-protect .media:hover {
+  color: red;
+  text-decoration: underline;
+}
+.wjs-protect .media:hover a {
+  color: red;
+}
+.wjs-protect .media a {
+  font-size: 50px;
+  color: gray;
+}
+.wjs-protect .row > div {
+  padding: 10px;
+}
+
+.wjs-book {
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  padding: 10px 250px;
+}
+.wjs-book .left a {
+  color: red;
+  border-bottom: 1px dashed red;
+  text-decoration: none;
+}
+.wjs-book .right a {
+  color: gray;
+}
+.wjs-book .right a:hover {
+  color: red;
+}
+
+#wjs-earnmoney .nav-tabs a {
+  color: gray;
+  border-color: transparent;
+}
+#wjs-earnmoney .nav-tabs a:hover {
+  background-color: transparent;
+  border-color: transparent;
+}
+#wjs-earnmoney .nav-tabs li.active a {
+  border-bottom: 3px solid red;
+}
+#wjs-earnmoney .tab-content .row > div {
+  padding: 10px;
+}
+#wjs-earnmoney .tab-content .row .ticket {
+  height: 150px;
+  display: block;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  box-shadow: 5px 5px 10px hotpink;
+  color: gray;
+  text-decoration: none;
+}
+#wjs-earnmoney .tab-content .row .ticket .right {
+  width: 108px;
+  text-align: center;
+  padding-top: 20px;
+  border-left: 1px dashed #000;
+  position: relative;
+}
+#wjs-earnmoney .tab-content .row .ticket .right::before {
+  content: '';
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: white;
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  border-bottom: 1px solid #000;
+}
+#wjs-earnmoney .tab-content .row .ticket .right::after {
+  content: '';
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: white;
+  position: absolute;
+  bottom: -10px;
+  left: -10px;
+  border-top: 1px solid #000;
+}
+#wjs-earnmoney .tab-content .row .ticket .right span {
+  padding: 2px;
+  border: 1px solid gray;
+  border-radius: 4px;
+}
+#wjs-earnmoney .tab-content .row .ticket .right span:first-child {
+  border-color: yellowgreen;
+  color: yellowgreen;
+  font-weight: 900;
+}
+#wjs-earnmoney .tab-content .row .ticket .right span:nth-of-type(2) {
+  border-color: hotpink;
+  color: hotpink;
+  font-weight: 900;
+}
+#wjs-earnmoney .tab-content .row .ticket .right p {
+  padding-top: 10px;
+}
+#wjs-earnmoney .tab-content .row .ticket .left {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+#wjs-earnmoney .tab-content .row .ticket .left h2 {
+  text-align: center;
+  margin: 0;
+  font-size: 20px;
+  font-weight: normal;
+  padding: 5px 0;
+}
+#wjs-earnmoney .tab-content .row .ticket .left .content {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 10px;
+  font-weight: 900;
+}
+#wjs-earnmoney .tab-content .row .ticket .left .content p {
+  padding: 3px 0;
+  margin: 0;
+}
+#wjs-earnmoney .tab-content .row .ticket .left .content .content-r {
+  text-align: right;
+}
+#wjs-earnmoney .tab-content .row .ticket.red {
+  background-color: red;
+  color: white;
+}
+#wjs-earnmoney .tab-content .row .ticket.red .right {
+  border-color: white;
+}
+#wjs-earnmoney .tab-content .row .ticket.red::before {
+  font-size: 40px;
+  position: absolute;
+}
+
+.wjs-news {
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+}
+.wjs-news .row > div:nth-of-type(2) h2 {
+  text-align: center;
+  border-bottom: 1px solid #000;
+  padding-bottom: 10px;
+  position: relative;
+}
+.wjs-news .row > div:nth-of-type(2) h2::before {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px solid #000;
+  right: -10px;
+  bottom: -5px;
+}
+.wjs-news .nav-tabs li {
+  padding: 20px 0;
+}
+.wjs-news .nav-tabs li a {
+  font-size: 50px;
+  color: white;
+  background-color: gray;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.wjs-news .nav-tabs li a:hover {
+  background-color: red;
+  color: white;
+}
+.wjs-news .nav-tabs li.active a {
+  background-color: red;
+  color: white;
+}
+.wjs-news .line {
+  height: 80%;
+  border-left: 1px dashed black;
+  position: absolute;
+  top: 25px;
+  left: 40px;
+}
+.wjs-news .tab-content ul li {
+  padding: 10px 0;
+}
+.wjs-news .tab-content ul li a {
+  color: gray;
+}
+
+.wjs-footer {
+  text-align: center;
+}
+.wjs-footer ul {
+  display: inline-block;
+}
+.wjs-footer ul li {
+  padding: 0 10px;
+}
+.wjs-footer ul a {
+  font-size: 100px;
+  text-decoration: none;
+  color: gray;
+}
